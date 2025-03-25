@@ -1,3 +1,4 @@
+import emptyImage from '../assets/icon-empty.svg';
 import { inputElement, mainElement, taskListElement } from "./elements";
 import { initTaskListeners } from "./eventListeners";
 
@@ -104,7 +105,7 @@ export const initDataOnStartup = () => {
 
 export const renderEmptyState = () => {
     taskListElement.innerHTML = `<li class='EmptyList'>
-      <img class='EmptyList__img' src="./assets/icon-empty.svg" alt="list is empty" />
+      <img class='EmptyList__img' src="${emptyImage}" alt="list is empty" />
       <p>قائمة المهام فارغة</p>
     </li>`;
 };
