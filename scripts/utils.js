@@ -1,4 +1,6 @@
-import emptyImage from '../assets/icon-empty.svg';
+import emptyImage from "../assets/icon-empty.svg";
+import checkboxImg from "../assets/icon-checkmark.svg"
+import basketImg from "../assets/icon-basket.svg"
 import { inputElement, mainElement, taskListElement } from "./elements";
 import { initTaskListeners } from "./eventListeners";
 
@@ -22,13 +24,13 @@ export const renderTaskList = (tasks) => {
         taskList += `<li class="TaskList__taskContent${task.isCompleted ? " TaskList__taskContent--isActive" : ""
             }">
       <div class="TaskList__checkbox" tabindex="0" role="button">
-        <img class="TaskList__checkboxImg" src="./assets/icon-checkmark.svg" alt="checkmark" />
+        <img class="TaskList__checkboxImg" src="${checkboxImg}" alt="checkmark" />
       </div>
       <div class="TaskList__valueContent">
         <p class="TaskList__value">
           ${task.value}
         </p>
-        <img src="./assets/icon-basket.svg"
+        <img src="${basketImg}"
              class="TaskList__deleteIcon"
              alt="basket-icon"
         />
